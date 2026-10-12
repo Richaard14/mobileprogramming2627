@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class CreditCardsPage extends StatelessWidget {
   
   // TODO 1: GANTI VARIABEL INI DENGAN DATA DIRI ANDA
-  final String namaMahasiswa = "NAMA LENGKAP ANDA"; // Jangan biarkan kosong!
-  final String nimMahasiswa = "NIM ANDA"; // Jangan biarkan kosong!
+  final String namaMahasiswa = "Charsten Richard Tewu"; // Jangan biarkan kosong!
+  final String nimMahasiswa = "20245520015"; // Jangan biarkan kosong!
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class CreditCardsPage extends StatelessWidget {
       ),
     );
   }
-
+}
   // ===========================================================================
   // PERINGATAN: DILARANG MENGUBAH NAMA FUNGSI DAN PARAMETER DI BAWAH INI!
   // JIKA ANDA MENGGUNAKAN AI GENERATOR SEPENUHNYA, STRUKTUR INI BIASANYA AKAN RUSAK.
