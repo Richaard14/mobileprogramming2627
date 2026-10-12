@@ -116,8 +116,27 @@ class CreditCardsPage extends StatelessWidget {
       color: color,
       child: Container(
         height: 200,
-        // KODE UI ANDA DI SINI
-        child: const Center(child: Text("UI Kartu belum dibuat...")),
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            _buildLogosBlock(),
+            Text(
+              cardNumber,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                letterSpacing: 2.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            /*_buildDetailsBlock(
+              cardHolder: cardHolder,
+              cardExpiration: cardExpiration,
+            ), */
+          ],
+        ),
       ),
     );
   }
@@ -128,10 +147,19 @@ class CreditCardsPage extends StatelessWidget {
     // CATATAN: Atur posisi sejajar berlawanan (kiri dan kanan). 
     // AI teks tidak tahu dimensi resolusi asli gambar ini. Anda harus mengatur nilai width dan height 
     // secara manual agar gambar tidak pecah atau overflow (terpotong).
-    return Row(
+  return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        // KODE GAMBAR ANDA DI SINI
+        Image.asset(
+          'assets/images/contact_less.png',
+          width: 28,
+          height: 28,
+        ),
+        Image.asset(
+          'assets/images/mastercard.png',
+          width: 40,
+          height: 30,
+        ),
       ],
     );
   }
