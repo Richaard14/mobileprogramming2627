@@ -53,10 +53,10 @@ class CreditCardsPage extends StatelessWidget {
                 cardHolder: namaMahasiswa,
                 cardNumber: "9874 4785 XXXX 6548"),
             
-            /* _buildAddCardButton(
+            _buildAddCardButton(
               icon: const Icon(Icons.add),
               color: const Color(0xFF081603),
-            ) */
+            )
           ],
         ),
       ),
@@ -131,10 +131,10 @@ class CreditCardsPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            /*_buildDetailsBlock(
+            _buildDetailsBlock(
               cardHolder: cardHolder,
               cardExpiration: cardExpiration,
-            ), */
+            ),
           ],
         ),
       ),
@@ -164,7 +164,82 @@ class CreditCardsPage extends StatelessWidget {
     );
   }
   // buat Column berisi kontainer dan Informasi
-
+Row _buildDetailsBlock({
+    required String cardHolder, 
+    required String cardExpiration,
+  }) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                "CARDHOLDER",
+                style: TextStyle(
+                  color: Colors.grey[400],
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                cardHolder.toUpperCase(),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 12),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "VALID THRU",
+              style: TextStyle(
+                color: Colors.grey[400],
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              cardExpiration,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
   // buat   FloatingActionButton
-  
+  Widget _buildAddCardButton({required Icon icon, required Color color}) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: Container(
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(16.0),
+          ),
+          child: IconButton(
+            onPressed: () {},
+            icon: icon,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
   // Build Column
