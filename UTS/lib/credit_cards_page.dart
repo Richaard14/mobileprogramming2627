@@ -53,10 +53,10 @@ class CreditCardsPage extends StatelessWidget {
                 cardHolder: namaMahasiswa,
                 cardNumber: "9874 4785 XXXX 6548"),
             
-            _buildAddCardButton(
+            /* _buildAddCardButton(
               icon: const Icon(Icons.add),
               color: const Color(0xFF081603),
-            )
+            ) */
           ],
         ),
       ),
@@ -78,13 +78,26 @@ class CreditCardsPage extends StatelessWidget {
         // KODE UI ANDA DI SINI
         // padding 1 
         Padding(
-            padding: const EdgeInsets.only(),
-
+            padding: const EdgeInsets.only(top: 16.0, bottom: 4.0, left: 12.0),
+            child: Text(
+              title,
+              style: const TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            )
         ),
         // padding 2
         Padding(
-            padding: const EdgeInsets.only(),
-
+            padding: const EdgeInsets.only(bottom: 16.0, left: 12.0),
+            child: Text(
+              subTitle,
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.grey,
+              ),
+            )
         ),
       ],
     );
