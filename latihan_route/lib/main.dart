@@ -11,8 +11,6 @@ class LayarKedua extends StatelessWidget {
   }
 }
 
-void main() {
-  runApp(const MyApp())
 }
 
 class MyApp extends StatelessWidget {
