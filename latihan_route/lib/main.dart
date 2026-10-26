@@ -59,15 +59,15 @@ class MyHome extends StatelessWidget {
   }
 }
 
+
 class LayarKedua extends StatelessWidget {
   const LayarKedua({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Screen Kedua')),
-      body: const Center(
-        child: Text('Ini screen kedua'),
+      body: Center(
+        child: Text('Ini Screen 2'),
       ),
     );
   }
